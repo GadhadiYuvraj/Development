@@ -34,5 +34,61 @@ print("Floor Div of Num_1 and num_2 is : ", num1 // num2)
 print("Reminder after div of Num_1 and num_2 is : ", num1 % num2)  
 print("Power of num_1 to num_2 is:", num1 ** num2)
 
+print("\n\n--------------------------\n\n")
 
-# 2️⃣ Assignment Operators (=, +=, -=, *=, /=)
+
+# 2️⃣ Assignment Operators (=, +=, -=, *=, /=, **=, )
+# Assignment operators are used to assign values to variables.
+# They can also update the value of a variable using arithmetic operations.
+
+# a = 5 : -->  "a" is variable -->  "=" is assingment operator --> "5" is assigned value
+assing = 2
+assing += 10  # :--> here "+="" is "Add and assign" assingment operator 
+assing = assing + 10 #:->> this is same as above one but does not use assingment operator 
+# and also it is the example of how the assingmet operator works
+
+print (assing)
+
+
+
+x = 10
+print("Current assigned value of X :", x) #10
+
+x +=  4 # 14
+print("Add and assign:", x) #14
+
+x -= 4
+print("Add and assign:", x) #10
+
+x /= 2
+print("Divide(flote value) and assign:", x) #5.0
+
+x *= 4
+print("Multiply and assign:", x) #20
+
+x //= 2
+print("Floor divide and assign:", x) #10
+
+x **= 2
+print("Exponent and assign:", x) #100
+
+x %= 3
+print("Modulus and assign : ", x) #1.0
+
+print("\n\n--------------------------\n\n")
+
+
+
+# 3️⃣ Comparison Operators (==, !=, >, <, >=, <=)
+# Comparison operators (also called relational operators) are used to compare two values or variables.
+# The result of a comparison is always a Boolean value --> True or False
+
+
+
+
+
+
+
+
+
+
