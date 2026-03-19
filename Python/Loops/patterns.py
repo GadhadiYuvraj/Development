@@ -35,12 +35,12 @@
 # * *
 # * 
 
-num = 5
+# num = 5
 
-for row in range(num):
-    for col in range(row, num):
-        print(" * ", end = " ")
-    print()
+# for row in range(num):
+#     for col in range(row, num):
+#         print(" * ", end = " ")
+#     print()
 
 
 
