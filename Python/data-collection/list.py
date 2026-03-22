@@ -79,4 +79,41 @@ odd = [1,3,5,7,9]
 # print (even *3 )
 
 
-''' python variable don't store values, They Store refereneces (addresses)   '''
+# Reference & Memory Behavior (MOST IMPORTANT)
+''' python variable don't store values, They Store refereneces (addresses) '''
+
+
+a = [1,2,3,4]
+b = a
+
+print(b)
+
+b[2] = 99
+
+print(b) #[1, 2, 99, 4]
+
+print(a) #[1, 2, 99, 4] 
+
+#in memory its like 
+''' a ──► [1,2,3,4]
+b ──► same list'''
+
+# so what you do? you use Copy() and Deepcopy
+
+''' 
+When working with data, sometimes you want:
+• same data → but independent
+• changes in one → should NOT affect other
+
+for e.g :
+orginal_data = [1,2,3,4]
+copy_data = orginal_data
+
+Now if you modify backup:
+copy_data.append("5")
+
+👉 Suddenly original also changes 😬
+
+so to prevent this we use "copy()" also know as Shallow Copy and "deepcopy()" know as Deep Copy
+
+'''
