@@ -6,38 +6,70 @@ console.log("Hello", name, "Welcome to our game!");
 
 const shouldWePlay = prompt("Do you want to play ? ");
 
-if (shouldWePlay.toLowerCase() === "yes") {
+if (shouldWePlay.toLowerCase() == "yes") {
   console.log("Okay then Let's Play! 😁");
 
   // Game Logic
   console.log("Now You Have Entered in a Maze,");
   console.log("Where Do you want to go ?");
   const leftOrRight = prompt(" Left ⬅️or Right➡️ ?");
-  if (leftOrRight.toLowerCase() === "left") {
-    console.log("Nice choice buddy");
-    console.log("There are 2 doors in front of you  🚪🚪");
-    const direction = prompt("Select any one Door-1 OR Door 2?:  ");
-    if (direction == "1") {
+  // Left turn
+  if (leftOrRight.toLowerCase() == "left") {
+    console.log("You go let and see a bridge...");
+    const cross = prompt("Do you want to cross a bridge?").toLowerCase();
+    if (cross == "yes" || cross == "y") {
       console.log(
-        "you found out that is a fire 🔥 in this room and you saw another door (the only left which can be open ) so you just go out from there and game ends...",
+        "You cross but the bridge was weak and broke and you fell. you lost.",
       );
-    } else if (direction == "2") {
+    } else if (cross.toLowerCase() == "no") {
       console.log(
-        "You just dont want to continue this game so you left again ",
+        "you see another Road near the bridge and you pass from there",
       );
+      console.log("and Some how you find a way out (A Hiddien Gate to wind)");
+      console.log("Congratulationss");
     } else {
-      console.log("invalid input. Get lost");
+      console.log("Get Lost Your Out 😑");
     }
-  } else if (leftOrRight.toLowerCase() === "right") {
-    console.log("Congratulations you have found the way out");
+  } else if (leftOrRight.toLowerCase() == "right") {
+    console.log("you chose to move right");
+    console.log(
+      "There are 2 doors now one will instantly make you winner and \nanother one will keep the game moving",
+    );
+    const choice = prompt("Door 1 or Door 2 : ");
+    if (choice.toLowerCase() == "door 1" || choice.toLowerCase() == "1") {
+      console.log("You found out there is a Demon in this room and you have 2");
+      console.log(
+        "again you have 2  options 1st Fight the Demon \n2nd You have to be his Slave for 2 years and still he might kill you.",
+      );
+      const demonRoom = prompt("Chose Fight or Slave : ");
+      if (demonRoom.toLowerCase() == "fight") {
+        console.log("You fought Bravely but died");
+      } else if (demonRoom.toLowerCase() == "slave") {
+        console.log(
+          "You found out that Demon cannot go out from this room and once your Out He cannot ever catch you",
+        );
+        console.log("So you run away and Won the game");
+        console.log("Congratulations 🎉🥳");
+      } else {
+        console.log("You have selected wrong input and your out of this Game");
+      }
+    } else if (
+      choice.toLowerCase() == "door 2" ||
+      choice.toLowerCase() == "2"
+    ) {
+      console.log("You leave this maze safely...");
+      console.log("Congratulation!! 🥳🎉You won this game ");
+    } else {
+      console.log("Invalid input... Get Lost");
+    }
   }
-} else if (shouldWePlay.toLowerCase() === "no") {
+} else if (shouldWePlay.toLowerCase() == "no") {
   console.log("okay no problem.. 🥲");
 } else {
   console.log("Invalid input... 🤨\nTry again...😑 ");
 }
 
-/*Improved code by chatGPT */
+/*Improved code */
 // const prompt = require("prompt-sync")();
 
 // let name = prompt("What is your name? ");
